@@ -155,7 +155,7 @@ module.exports = function hash_src(options)
                         if (options.hash_len) {
                             hash = hash.substr(0, options.hash_len);
                         }
-                        hashes[link] = hash;
+                        hashes[link] = hash + new Date().getTime();
                         next();
                     });
                 });
